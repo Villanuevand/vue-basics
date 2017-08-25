@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Create Filters in Vue.js</title>
+    <link rel="stylesheet" href="/exercises/styles.css">
+    <script src="https://unpkg.com/vue@2.4.2"></script>
+</head>
+<body>
+    <div id="card">
+        <header>{{ title | capitalize }}</header>
+        <div>
+            <input  type="text" id="itemForm">
+            <button >Add Dinosaur</button>
+        </div>
+        <ul>
+            <li v-for="dino in dinos">
+                <h4>{{ dino.text | capitalize }}</h4>
+                <p>The {{ dino.text | undercase }} weighs {{ dino.weight }}</p>
+                <a href="#">{{ dino.text | undercase | url}}</a>
+            </li>
+        </ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
