@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title> Watchers to Respond to Async Updates</title>
+    <link rel="stylesheet" href="/exercises/styles.css">
+    <script src="https://unpkg.com/vue@2.4.2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.16.6/lodash.min.js"></script>
+</head>
+<body>
+    <div id="card">
+        <header>{{ title }}</header>
+       <form v-on:submit="addItem">
+            <input  type="text" id="itemForm" v-model="input">
+            <button v-bind:disabled="buttonDisabled"> {{ buttonText }}</button>
+       </form>
+        <ul>
+            <li v-for="(item,index) in items">
+                <button v-on:click="item.quantity -= 1">-</button>
+                {{ item.quantity}}
+                <button v-on:click="item.quantity += 1">+</button>
+                {{ item.text}} <button class="extinct" v-on:click="removeItem(index)">Make Extinct</button>
+            </li>
+        </ul>
+        <ul>
+            <li>Total Dinosaurs: {{ totalDinos }} <span>Updated: {{ dinosUpdated }}</span></li>
+            <li>Total Species: {{ totalSpecies }} <span>Updated: {{ speciesUpdated }}</span></li>
+        </ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
