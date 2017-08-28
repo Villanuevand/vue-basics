@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title> v-bind: Update Attributes, Classes and Styles</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/vue@2.4.2"></script>
+</head>
+<body>
+    <div id="card">
+        <header>{{ title }}</header>
+        <button
+            v-bind:class="[sizeToggle ? 'large' : '', {'rounded':isRounded}]"
+            v-bind:disabled="disabled"
+            v-bind:style="styles"
+            > Start Tour</button>
+        <hr>
+        <h4>Options</h4>
+        <ul>
+            <li>
+                <input type="checkbox" v-model="sizeToggle">
+                <label>Large</label>
+            </li>
+            <li>
+                <input type="checkbox" id="round" v-model="isRounded">
+                <label for="rounded">Rounded</label>
+            </li>
+            <li>
+                <input type="checkbox" v-model="disabled">
+                <label for="disabled">Disabled</label>
+            </li>
+            <li>
+                <input type="text" v-model="backgroundColor">
+                <label for="bg-color">Background Color</label>
+            </li>
+            <li>
+                <input type="text" v-model="fontColor">
+                <label for="fontColor">Font Color</label>
+            </li>
+            <li>
+                <input type="range" v-model="range" min="15" max="85">
+                <label for="range">Position</label>
+
+            </li>
+        </ul>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
