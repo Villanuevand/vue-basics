@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title> Build Reusable Vue.js Components </title>
+    <link rel="stylesheet" href="/exercises/styles.css">
+    <script src="https://unpkg.com/vue@2.4.2"></script>
+</head>
+<body>
+    <div id="card">
+        <header>Dinosaurs</header>
+        <ul>
+            <li v-for="dino in dinos">
+                <dino-counter 
+                    v-bind:name="dino.name"
+                    v-bind:initial-quantity="dino.quantity"
+                    v-on:increment="incrementTotal">
+            </li>
+        </ul>
+        <p>Total Dinosaurs: {{ total }}</p>
+    </div>
+    <script type="text/x-template" id="dino-counter">
+        <div>
+            <button v-on:click="increment">{{quantity}} </button> {{name}}
+        </div>
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

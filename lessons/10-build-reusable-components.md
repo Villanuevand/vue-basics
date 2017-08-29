@@ -1,0 +1,3 @@
+# Build Reusable Vue.js Components
+
+By building components, you can extend basic HTML elements and reuse encapsulated code. Most options that are passed into a Vue constructor can be passed into a component. Each instance of a component has an isolated scope. Data can only be passed one direction and it must be from parent to child using props. To communicate with the parent element, use the $emit method.
