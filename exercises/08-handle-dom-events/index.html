@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title> Handle DOM Events in Vue.js with v-on </title>
+    <link rel="stylesheet" href="/exercises/styles.css">
+    <script src="https://unpkg.com/vue@2.4.2"></script>
+</head>
+<body>
+    <div id="card">
+        <header>Dinosaurs</header>
+        <form v-on:submit="addDinos">
+            <button type="submit">Add {{ amount }} Dinosaurs</button>
+            <input type="number" v-model.number="amount" />
+       </form>
+       <p>You have {{total}} dinosaurs!</p>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
