@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title> Bind Values to Input Fields in Vue.js </title>
+    <link rel="stylesheet" href="/exercises/styles.css">
+    <script src="https://unpkg.com/vue@2.4.2"></script>
+</head>
+<body>
+    <div id="card">
+        <input type="checkbox" id="checkbox" v-model="checked">
+        <label for="checkbox">This box is {{ checked ? 'checked' : 'unchecked'}}</label>
+        <hr>
+        <template v-for="dyno in dynos">
+            <label for="dyno">
+                <input type="radio" v-bind:value="dyno" v-model="chosenDyno">
+                {{dyno}}
+                <br>
+            </label>
+        </template> 
+        <p>Favorite Dyno: {{ chosenDyno }}</span> 
+        <hr>
+        <select name="periods" id="periods" v-model="selectedPeriods" multiple>
+            <option v-for="period in periods" v-bind:value="period.value">
+                {{period.name}}
+            </option>
+        </select>
+        <br>
+        <p>Selected Period: {{ selectedPeriods }}</p>
+        <hr>
+        <input type="text" v-model="single">
+        <p>{{single}}</p>
+        <hr>
+        <textarea name="message" id="message" cols="30" rows="10" v-model="message" placeholder="add something cool"></textarea>
+        <p style="white-space: pre">{{ message }}</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
