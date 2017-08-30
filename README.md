@@ -20,4 +20,3 @@ Develop Basic Web Apps with Vue.js 🔨⚙️  by EggHead 🍳
 - Dynamic Vue.js Components with the component element - {[Example](https://villanuevand.github.io/vue-basics/exercises/11-dynamic-components-with-component-element/), [Code](https://github.com/Villanuevand/vue-basics/tree/master/exercises/11-dynamic-components-with-component-element/)}
 
 
-Examples coming soon ... 🕰️
