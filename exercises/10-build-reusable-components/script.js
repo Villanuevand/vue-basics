@@ -29,8 +29,8 @@ var card = new Vue({
         } 
     },
     methods: {
-       incrementTotal: function (amount) {
+        incrementTotal: function (amount) {
             this.total += amount;
-       } 
+        }
     }
 });

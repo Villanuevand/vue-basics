@@ -15,7 +15,7 @@ var card = new Vue({
                 color: this.fontColor,
                 background: this.backgroundColor,
                 'margin-left': this.range+"%"
-              }
+            }
         }
     }
 

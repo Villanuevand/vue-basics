@@ -10,7 +10,7 @@ var card = new Vue({
             { text: "Tyrannosaurus", quantity: 5 },
             { text: "Triceratops", quantity: 3 },
             { text: "Stegosaurus", quantity: 2 }
-          ]
+        ]
     },
     methods: {
         addItem: function (e) {
@@ -26,6 +26,6 @@ var card = new Vue({
     computed: {
         buttonDisabled: function() {
             return this.input == "";
-          }
+        }
     }
 });

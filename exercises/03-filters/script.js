@@ -4,16 +4,16 @@ var card = new Vue({
         title: 'dinosaurs',
         dinos: [
             { 
-              text: "telociraptor", 
-              weight: "15 kg" 
+                text: "telociraptor", 
+                weight: "15 kg" 
             },
             { 
-              text: "triceratops", 
-              weight: "6,000 kg" 
+                text: "triceratops", 
+                weight: "6,000 kg" 
             },
             { 
-              text: "Stegosaurus", 
-              weight: "2,500 kg" 
+                text: "Stegosaurus", 
+                weight: "2,500 kg" 
             }
         ]
     },
