@@ -9,7 +9,7 @@ var card = new Vue({
             { text: "Tyrannosaurus", quantity: 5 },
             { text: "Triceratops", quantity: 3 },
             { text: "Stegosaurus", quantity: 6 }
-          ]
+        ]
     },
     methods: {
         addItem: function (e) {
@@ -30,9 +30,9 @@ var card = new Vue({
 
             for(var i in items) {
                 sum += items[i].quantity;
-              }
-              
-              return sum;
+            }
+            
+            return sum;
         },
         totalSpecies: function () {
             this.speciesUpdated += 1;

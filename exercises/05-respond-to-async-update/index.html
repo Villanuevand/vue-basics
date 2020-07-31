@@ -10,10 +10,10 @@
 <body>
     <div id="card">
         <header>{{ title }}</header>
-       <form v-on:submit="addItem">
+        <form v-on:submit="addItem">
             <input  type="text" id="itemForm" v-model="input">
             <button v-bind:disabled="buttonDisabled"> {{ buttonText }}</button>
-       </form>
+        </form>
         <ul>
             <li v-for="(item,index) in items">
                 <button v-on:click="item.quantity -= 1">-</button>
